@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This app is deployed here: **https://my-health-chatbot.herokuapp.com/**
+
 In order to start with first clone the project using:
 **git clone https://github.com/raiswathi5/Chatbot.git**
 
