@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
 import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+
 import './App.css';
 
 class Details extends Component {
@@ -119,14 +121,14 @@ class HealthForm extends Component {
           },
           {
             id: '5',
-            component: (<div className="My-date"><DatePicker placeholderText="Select your Date of Birth." onChange={this.handleChange}/></div>),
-            asMessage: true,
+            message: 'Select your DOB.',
             trigger: 'dateOfBirth',
           },
           {
             id: 'dateOfBirth',
-            user: true,
-            trigger: '7',
+            options: [
+              { value: this.state.dateOfBirth.toString(), label:'Select Date', component: <DatePicker selected={this.state.dateOfBirth} onChange={this.handleChange}/>, trigger: '7' }
+            ]
           },
           {
             id: '7',
@@ -175,9 +177,9 @@ class HealthForm extends Component {
           {
             id: 'update-fields',
             options: [
-              { value: 'name', label: 'Full Name', trigger: 'update-name' },
+              { value: 'fullName', label: 'Full Name', trigger: 'update-name' },
               { value: 'address', label: 'Address', trigger: 'update-address' },
-              { value: 'dob', label: 'DOB', trigger: 'update-dob' },
+              { value: 'dateOfBirth', label: 'DOB', trigger: 'update-dob' },
               { value: 'healthIssue', label: 'Health Issue', trigger: 'update-health' },
             ],
           },
