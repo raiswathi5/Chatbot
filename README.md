@@ -2,8 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-In order to start with first clone the project with:
-**https://github.com/raiswathi5/Chatbot.git**
+In order to start with first clone the project using:
+**git clone https://github.com/raiswathi5/Chatbot.git**
 
 Then move to your project directory using:
 `cd Chatbot`
