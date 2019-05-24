@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HealthForm from './HealthForm';
 
 function App() {
   return (
     <div className="App">
-      <HealthForm />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">
+        <p> Click on the bottom-right icon to use the ChatBot. </p>
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,8 +18,9 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header> */}
+        </a> */}
+      </header>
+      <HealthForm />
     </div>
   );
 }

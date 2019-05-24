@@ -9,18 +9,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #6E48AA;
+  font-weight: bold;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.My-date{
+  overflow: visible;
+  height: 300px;
+  width: 150px;
 }
 
 @keyframes App-logo-spin {

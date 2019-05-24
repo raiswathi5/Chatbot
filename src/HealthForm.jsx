@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot from 'react-simple-chatbot';
-import DatePicker from "react-datepicker";
- 
+import DatePicker from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
+import './App.css';
 
 class Details extends Component {
   constructor(props) {
@@ -71,10 +71,6 @@ class HealthForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
   }
-//   state = {
-//     opened: false, 
-//     dateOfBirth: new Date()
-//   }
 
   toggleFloating = ({ opened }) => {
     this.setState({ opened }); 
@@ -97,6 +93,12 @@ class HealthForm extends Component {
           {
             id: 'fullName',
             user: true,
+            validator: (value) => {
+              if (!value) {
+                return 'Please enter your Full Name.';
+              }
+              return true;
+            },
             trigger: '3',
           },
           {
@@ -107,11 +109,17 @@ class HealthForm extends Component {
           {
             id: 'address',
             user: true,
+            validator: (value) => {
+              if (!value) {
+                return 'Please enter your address.';
+              }
+              return true;
+            },
             trigger: 5,
           },
           {
             id: '5',
-            component: <DatePicker placeholderText="Select your Date of Birth." selected={this.state.dateOfBirth} onChange={this.handleChange}/>,
+            component: (<div className="My-date"><DatePicker placeholderText="Select your Date of Birth." onChange={this.handleChange}/></div>),
             asMessage: true,
             trigger: 'dateOfBirth',
           },
@@ -128,6 +136,12 @@ class HealthForm extends Component {
           {
             id: 'healthIssue',
             user: true,
+            validator: (value) => {
+              if (!value) {
+                return 'Enter "None/No" if you have no issues.';
+              }
+              return true;
+            },
             trigger: 9,
           },
           {
